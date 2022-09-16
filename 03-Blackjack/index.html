@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BlackJack</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="./">🃏 BlackJack</a>
+        <div><span class="dealer-wins">0</span><span> | </span><span class="player-wins">0</span></div>
+    </header>
+
+    <div class="layout">
+        <h2>Dealer: <span class="dealer-score">0</span></h2>
+        <div class="dealer"></div>
+    </div>
+
+    <div class="btns-game">
+        <button class="btn-hit">🎲 Hit</button>
+        <button class="btn-stand">📥 Stand</button>
+    </div>
+
+    <div class="layout">
+        <h2>You: <span class="player-score">0</span></h2>
+        <div class="player"></div>
+    </div>
+
+    <div class="popup">
+        <div class="message"></div>
+        <button class="btn-new">🔄 New Game</button>
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="./index.js"></script>
+
+</body>
+</html>
