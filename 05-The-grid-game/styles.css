@@ -1,0 +1,107 @@
+
+
+body {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100%;
+}
+
+header {
+  align-items: center;
+  background-color: #444;
+  border-bottom: 1px solid #888;
+  color: #fff;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #999;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 6px 15px;
+}
+
+button:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #333;
+}
+
+#stage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  height: 50px;
+  padding: 10px;
+}
+
+.your-number {
+
+  color:rgb(73, 234, 240);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.grid-item:hover {
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(73, 240, 95);
+  color: #333;
+  border: 3px solid rgb(73, 240, 95);
+}
+
+.selected:hover {
+  background-color: rgba(73, 240, 95, 0.644);
+  color: #333;
+}
+
+.spinned {
+  background-color: rgb(73, 234, 240);
+  color: #333;
+
+
+}
+
