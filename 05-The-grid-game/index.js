@@ -2,6 +2,18 @@
 
 let yourNumber = '';
 
+function chunk(str, n) {
+  const len = str.length;
+  if ( len >= n ) {
+    const ret = [];
+    for( let i = len-1; i > 0; i -= n) {
+      ret.push(str.substr(i, n));
+    }
+    return ret;
+  }
+  return str;
+};
+
 $('.grid-item').on('click', (element) => {
   if ( $(element.currentTarget).hasClass('selected') ) {
     $(element.currentTarget).removeClass('selected');
@@ -17,6 +29,8 @@ $('.grid-item').on('click', (element) => {
 
 $('.grid-item').on('dblclick', () => {
   $('.grid-item').removeClass('selected');
+  yourNumber = '';
+  $('.your-number').text(yourNumber);
 });
 
 $('#reset').on('click', () => {
@@ -47,38 +61,31 @@ async function spinCrazy () {
   let i = 0;
   const stopIntervals = setInterval(function () {
     // console.log(i);
-    let num = '';
-    for (let ii = 0; ii < 7; ii+7) {
-
-      if ( $(elements[ii]).hasClass('spinned') ) {
-        num += elements[ii].innerHTML;
-      }
-    }
     clearInterval(intervals[i]);
     i++;
-    if ( i >= j )
+    if ( i >= j ) {
+      let num = '';
+      for (let ii = 0; ii < 7; ii++) {
+        for (let jj = 0; jj < 49; jj+=7) {
+          // console.log(ii+jj);
+          if ( $(elements[ii+jj]).hasClass('spinned') ) {
+            num += elements[ii+jj].innerHTML;
+          }
+        }
+      }
+      $('.winner-number').text(num);
       clearInterval(stopIntervals);
+    }
   }, 10);
-
-  return 0;
-
+  
 }
-
-async function winnerNum () {
-
-  await spinCrazy();
-
-  const elements = $('.spinned').get()
-
-  console.log(elements);
-
-
-}
-
 
 $('#spin').on('click', () => {
   
   spinCrazy();
+
+  
+
 });
 
 
