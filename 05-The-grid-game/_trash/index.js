@@ -41,7 +41,9 @@ $('#reset').on('click', () => {
 });
 
 
-async function spinCrazy () {
+
+
+function spinCrazy () {
 
   const elements = $('.grid-item').get()
   const intervals = [];

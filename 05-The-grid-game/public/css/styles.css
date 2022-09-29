@@ -37,7 +37,7 @@ button:hover {
   color: #333;
 }
 
-#stage {
+.screen {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -54,39 +54,62 @@ button:hover {
 }
 
 .panel {
-
   display: flex;
-
+  height: 80px;
 }
 
 .your-number {
-
   color:rgb(73, 240, 95);
   font-size: 20px;
   font-weight: bold;
   padding: 20px;
-
 }
 
 .winner-number {
-
   color:rgb(73, 234, 240);
   font-size: 20px;
   font-weight: bold;
   padding: 20px;
+}
 
+.layout {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 400px auto 400px;
+}
+
+.game-container {
+  border-radius: 10px;
+  border: 1px solid white;
+  width: auto;
+  height: 100%;
+}
+
+.player {
+  text-align: center;
+  color: #fff;
+  border-bottom: 1px solid white;
+  margin: 10px;
+}
+
+
+.history-container {
+  border-radius: 10px;
+  border: 1px solid white;
+  width: auto;
+  height: 100%;
 }
 
 .grid-container {
   display: grid;
   gap: 10px;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
-  grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-rows: 80px 80px 80px 80px 80px 80px 80px;
   border-radius: 10px;
   border: 1px solid white;
   padding: 10px;
-
 }
+
 
 .grid-item {
   display: flex;

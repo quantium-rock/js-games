@@ -1,4 +1,15 @@
 
+
+
+const express = require("express");
+const app = express();
+  
+// Define routes here ...
+  
+app.listen(3000, function(){
+  console.log("server is running on port 3000");
+})
+
 let yourNumber = '';
 
 
@@ -23,9 +34,14 @@ $('.grid-item').on('dblclick', () => {
 
 $('#reset').on('click', () => {
   $('.grid-item').removeClass('selected');
-  clearInterval(intervalID[0]);
   yourNumber = '';
   $('.your-number').text(yourNumber);
+});
+
+$('#commit').on('click', () => {
+  $.ajax('localhost:5000',{
+    yourNumber
+  })
 });
 
 
