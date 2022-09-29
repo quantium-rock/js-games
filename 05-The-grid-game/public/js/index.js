@@ -1,19 +1,6 @@
 
-const $ = require('jquery');
-
 let yourNumber = '';
 
-function chunk(str, n) {
-  const len = str.length;
-  if ( len >= n ) {
-    const ret = [];
-    for( let i = len-1; i > 0; i -= n) {
-      ret.push(str.substr(i, n));
-    }
-    return ret;
-  }
-  return str;
-};
 
 $('.grid-item').on('click', (element) => {
   if ( $(element.currentTarget).hasClass('selected') ) {
